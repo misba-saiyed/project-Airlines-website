@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airlines project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      
+       *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+           
+        }
+        #head{
+             background-color: #333;
+           
+        }
+        .container{
+            height:90px;
+            background-color: #333;
+            color:white;
+           display: flex;
+           justify-content: space-between;
+           margin-left:30px;
+           margin-right:30px;
+           padding:20px 20px;
+           padding-left:40px;
+           font-family: Arial, Helvetica, sans-serif; 
+           }
+ 
+ header .container .logo h1{
+                  color:skyblue;
+                  font-size: xx-large;
+                  font-style: italic;
+
+        }
+
+    h1{
+        font-size:xx-large;
+        font-style:italic;
+        font-weight:bolder;
+
+    }
+
+        .line{
+           color:lightgray;
+       } 
+    
+       .up{
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: baseline;
+          /* justify-content: center; */
+       }
+       .up i{
+        color:lightgray;
+         padding: 2px;
+        padding-bottom:25px;
+        /* line-height:25px; */
+        
+         }
+
+    .up i:hover{
+              color:#4fafc7;
+              
+    }
+
+
+    .travel{
+             color:lightgray ;
+             font-weight: lighter;
+       }
+
+    .ac{
+          background-color: black;
+          color: #fff;
+          padding:8px;
+          width:20px;
+          justify-content: center;
+    }
+    .down a{
+         color:lightgray;
+         text-decoration: none;
+         padding-left:5px;
+         margin-top:15px;
+         width:20px;
+         
+    }
+    .down a:hover{
+             padding:8px ;
+             background-color: black;
+             color: #fff;
+             width:20px;
+            
+    }
+       
+    /* slider */
+       #main{
+            height:90vh;
+            width:80%;
+            margin: 0 auto;
+            /* position:relative; */
+            box-sizing: border-box;
+            /* justify-content: center; */
+             /* margin-left:150px;  */
+             /* margin-right:150px; */
+           }
+
+        img{
+          height:inherit;
+          width:100% ;
+        }
+
+        #one,#two,#three{
+            position: absolute;
+            background-color:grey ;
+            bottom:5px;
+            height:15px;
+            width:40px;
+            margin-bottom:15px;
+            cursor:pointer;
+        }
+
+        #one:hover,#two:hover,#three:hover{
+           background-color: #fff;
+        }
+
+        #one{
+          left:45%;
+          margin-left:-30px;
+        }
+
+        #two{
+          left:50%;
+          margin-left:-30px;
+        }
+
+        #three{
+          left:55%;
+          margin-left:-30px;
+        }
+       .side-mn{
+             width: 80%;
+            /* height: 600px; */
+            margin: 0 auto;
+       }
+
+        .sidebar{
+             width: 100%; 
+            /* height: 600px; */
+            /* background-color: aqua; */
+            display: flex;
+           justify-content: space-between; 
+            /* background-color: #f8efef; */
+        }
+      
+     .content-left{
+            width: 28%;
+             /* height: 740px;  */
+            padding-left:25px;
+            /* background-color: brown; */
+             /* width:30%; */
+             /* margin-left:70px; */
+               /* margin-top: -17px; */
+               position: relative; 
+             background-color: #f8efef;
+             /* padding-left:50px; */
+             /* margin-left:40px; */
+             /* margin-right:50px; */
+           
+     }
+   .content-right{
+              /* width:60%; */
+              width: 70%;
+            /* height: 690px; */
+             padding-left:25px;
+            /* background-color: lightcoral; */
+   }
+
+    .order{
+         height:30px;
+         margin-top:-20px;
+         /* margin-bottom:20px; */
+         padding:10px 10px;
+         background-color:#252323;
+         color: #fff;
+         font-style: italic;
+  }
+  .order:hover{ 
+               background-color: transparent;
+               color: black; 
+               border:solid black;
+          } 
+  
+  .greater{
+         height:30px;
+         /* margin-bottom:20px; */
+         background-color:#252323;
+         color: #fff;
+         padding:10px 10px;
+       }
+       .greater:hover{
+               background-color: transparent;
+               color: black;
+               border:solid black;
+    }
+  
+   
+       h2{
+          color: #3d3636;
+          font-style: italic;
+          font-weight: lighter;
+       }
+     .welcome{
+              padding-top:20px;
+              font-style: italic;
+              font-weight: lighter;
+       }
+       .content-right .welcome{
+                font-weight:400;
+                font-size:x-large;
+                font-style:normal;
+                color: #3f3d3d;
+    }
+    .content-right .para{
+                         color: #41a4bd;
+    }
+
+    .read{
+            margin-left:490px;
+            height: 30px; 
+            padding:2px;
+            background-color: #252323;
+            color:#fff;
+            font-style: italic;
+            border-radius:5px;
+            width:16%;
+      }
+      .read:hover{
+            background-color: transparent;
+            color: black;
+            
+              }
+   
+           .btn{
+                
+                padding:0.7em 1.5em;
+                border-radiuS: 5px;
+                border: transparent;
+                font-size:0.9em;
+                margin:1em 0;
+                display: inline-block;
+                background:#2d7d91 ;
+                color:#fff;
+                  
+             }
+    
+    .btn:hover{
+                background:transparent;
+                color:black;
+                border:solid white;
+           }
+    
+    .btn1{
+       
+       /* border-radius:1em; */
+       border:solid white;
+       height:38px;
+       width: 75px;
+       /* font-size: 0.9; */
+       padding-top:10px;
+       padding-bottom:10px;
+       padding-left:15px;
+       padding-right:15px;
+       /* margin: 1 em 0; */
+       display: inline-block;
+       background: #2d7d91;
+       color:#fff;
+       font-style: italic;
+       border-radius:5px;
+      }
+ 
+ .btn1{
+       float:inline-end;
+       margin-right:10px;
+       margin-left:380px;
+       
+ }
+ .btn1:hover{
+        background-color:#5abe81;
+        color:whitesmoke;
+        border:solid white;
+        transition: all .3s ease;
+ }
+ .reserve{
+     float:inline-end;
+     height:30px;
+     padding:2px;
+     font-style: italic;
+     border-radius:5px;
+     width:20%;
+  }
+  .reserve:hover{
+            background-color: transparent;
+            color: black;
+  }
+  button{ 
+          width:fit-content; 
+          height: auto; 
+         background-color: #333; 
+         color:#fff; 
+          }
+
+         h5{
+      font-size: medium;
+
+  }
+  .input{
+    height:25px;
+    width:200px;
+    border:white;
+  }
+  .text{
+    height:25px;
+    width:120px;
+    border:white;
+    padding:10px;
+  }
+  .date{
+    height:25px;
+    border:white;
+  }
+  .time{
+    height:25px;
+    border:white;
+  }
+.recent{
+       font-size:x-large;
+       font-style: italic;
+       color: #6e6b6b;
+       font-weight: lighter;
+}
+
+.airchart li{
+           color:#41a4bd;
+   }
+   .craft{
+        color: #000000;
+   }
+   .charters{
+        color: #000000;
+   }
+   .char{
+      color:#666363;
+   }
+   .avero{
+        color: #000000;
+   }
+   .accu{
+      color:#3f3d3d;
+   }
+  .enim{
+        color: #3bc8eb;
+  }
+  .volup{
+    color: #3bc8eb;
+  }
+  .sed{
+    color: #3bc8eb;
+  }
+
+  .cont{
+           display: flex; 
+           justify-content:space-between; 
+           width: 100%;
+           /* height: 250px;  */
+          
+          }
+
+  .cont .right{
+          float: right;
+          box-sizing:content-box;
+          background-color: #3998af;
+          display: flex;
+          flex-direction: column;
+          width:18%;
+         justify-content: space-around;
+         color: #fff;
+          padding-inline-end:20px; 
+          padding-inline-start:20px;
+         margin-right:275px; 
+          margin-bottom:20px; 
+          margin-top:10px;
+          padding-top:10px; 
+        
+       
+      
+        }
+
+       .cont .left{
+                  width:35%;
+                  /* margin-bottom:40px;  */
+                  /* margin-top:20px;  */
+                  
+       }
+     
+ .our{
+              font-size: x-large;
+              font-style: italic;
+              color: #3f3d3d;
+         }
+     h6{
+  
+          font-size:medium;
+          color: #fff;
+          padding-left:20px; 
+          font-weight: lighter;
+      
+          
+         }
+            .thomas{
+             font-size: small;
+             font-weight:lighter;
+             
+         }
+
+          span .line{
+            font-size: large;
+            }
+          
+        .pass{
+            margin-bottom:15px;
+            }
+            .avero{
+            color: #000000;
+                 }
+       
+      .accu{
+           color:#3f3d3d;
+           font-size: medium;
+          }
+    
+
+          #containerf{
+           width:100%; 
+
+              }
+         
+    .footer{
+              background-color:#272525;
+              font-size: small;
+               width: 100%; 
+               height: 90px;
+              margin: 0 auto;
+              display: flex;
+              justify-content: center;
+              justify-content: space-between;
+               /* margin-top:180px;   */
+              }
+
+         .hr{
+          margin-bottom:7px;
+          width:230px;
+           
+         }
+
+    .footer .f-left {
+                  color: #fff;
+                   padding-top:30px; 
+                  padding-left:70px;
+                  display: flex;
+                  font-size: small;
+                     
+    }
+    .footer .f-right{
+                    color:#fff;
+                    padding-top:30px; 
+                    padding-right:70px;
+                    text-decoration: underline;
+                    font-size: small;
+                  
+    }
+    .do{
+      /* text-decoration: underline; */
+      color: white;
+      padding: 0px 5PX;
+      font-size:small;
+      
+    }
+    .bt{
+      text-decoration: none;
+    } 
+    
+   .free{
+         color: #fff;
+         padding: 0px 5PX;
+   }
+  .copy{
+       font-size:medium;
+       font-size: small;
+  }
+  .multi{
+      padding-left:2px;
+      color:#3998af;
+  }
+  .lorem{
+      padding-top:5px;
+      font-size:small;
+     
+  }
+
+  @media only screen and (max-width: 600px) {
+  body {
+    
+    width:100%;
+    display:column;
+    .hr {
+    margin-bottom: 7px;
+    width: auto;
+}
+.input {
+    height: 25px;
+    width: 120px;
+    border: white;
+}
+.order {
+    height: 30px;
+    margin-top: -20px;
+    padding: 5px 4px;
+    background-color: #252323;
+    color: #fff;
+    font-style: italic;
+}
+.read {
+   flex-direction:row;
+   float:left;
+    height: 35px;
+    padding: 2px;
+    background-color: #252323;
+    color: #fff;
+    font-style: italic;
+    border-radius: 5px;
+    width: 16%;
+}
+.btn1 {
+   float:right;
+}
+.reserve {
+    float: inline-end;
+    height: 30px;
+    padding: 2px;
+    font-style: italic;
+    border-radius: 5px;
+    width: 32%;
+}
+  }
+}
+        </style>
+</head>
+<body>
+
+    <section id="head">
+    <header>
+       <div class="container">
+        <div class="logo">
+           <h1> AIR<span class="line">LINES</span></h1>
+         <strong class="travel">INTERNATIONAL TRAVEL</strong>
+        </div>
+        <navbar>
+            <div class="up">
+          
+                <i class="fa fa-magnifying-glass fa-xs"></i> &nbsp;&vert; 
+         &nbsp; <i class="fa-sharp fa-regular fa-envelope fa-xs"></i>&nbsp;&nbsp;&vert; 
+         &nbsp; <i class="fa fa-light fa-house fa-xs"></i> 
+            </div>
+        <div class="down">
+            <a href="" class="ac">HOME </a>&nbsp;
+            <a href="">OUR AIRCRAFT </a>&nbsp;
+            <a href="">SAFETY  </a>&nbsp;
+            <a href="">CHARTERS</a>&nbsp;
+            <a href="">CONTACT US</a>
+        </div>
+        </navbar>
+    </section>
+    </header>
+    <div id="main">
+        <img id="Simage" src="https://media.tenor.com/MPB7m2zS1s0AAAAC/have-a-safe-flight.gif" alt="safety">
+  
+        <div id="one" onclick="one()"></div>
+        <div id="two" onclick="two()"></div>
+        <div id="three" onclick="three()"></div>
+      </div>
+
+      <div class="side-mn">
+        <div class="sidebar">
+          <div class="content-left">
+         
+           <btn class="order">ORDER TICKETS ONLINE </btn>|<btn class="greater">&gt;</btn><br><br><br>
+     
+           <h2>Your Flight Planner</h2><br>
+  
+           <input type="radio" name="">Round Trip&nbsp;
+           <input type="radio" name="">Empty-Leg&nbsp;<br>
+         
+          <input type="radio"&nbsp;name="">One Way&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio"&nbsp; name="" class="multi">Multi-Leg <br><br>
+
+          <label for="">Leaving From:</label><br>
+          <input type="text" name="text" id="text" class="input" placeholder="Enter City or Airport code" required><br><br>
+          <label for="">Going To:</label><br>
+          <input type="text" name="text" id="text" class="input" placeholder="Enter City or Airport code" required><br><br>
+          <label for="" class="time">Departure Date and Time:</label><br>
+          <input type="date" name="text" id="text" class="date" placeholder="" required>&nbsp;<input type="time" class="time"><br><br>
+          <label for="" >Return Date and Time:</label><br>
+          <input type="date" name="text" id="text" class="date" placeholder="" required>&nbsp;<input type="time" class="time"><br><br>
+          <label for="" class="pass">Passenger(s):</label><br>
+          <input type="text" name="text" id="text" class="text" placeholder="#passengers"required>&nbsp;&nbsp;
+          <button class="btn">GO!</button><br>
+          
+       <h3 class="recent">Recent News</h3><br>
+       <p  class="enim"> Nemo enim ips am voluptatem quia</p>
+       November 5,2010<br><br>
+       <hr class="hr">
+      <p class="volup"> Voluptas aspernatur autoditautfjuqt</p>
+       November 1,2010<br><br>
+       <hr class="hr">
+      <p class="sed"> Sed quia consequintur magni</p>
+       October 23,2010
+  
+          </div>
+         
+          <div class="content-right"><br><br>
+           <span class="welcome">Welcome to Our Website!</span><br><br>
+           <p class="para">Aliquefauctor acnulla ant vestibulumris  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+             <br>magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+  
+            <ul class="airchart">
+  
+           <li> <h4 class="craft">Aircraft</h4><br>
+                <p class="char"> Nemo enim ips am voluptatem quia Voluptas aspernatur autoditautfjuqt Sed quia<br> consequintur magni. </p><br>
+           <button class="read">READ MORE</button></li>
+  
+           <br><li><h5 class="charters">Charters</h5><br>
+         <P class="char">Neque Porro quisquam est,Sed quia non consequintur magni modi tempora Voluptas aspernatur autoditautfjuqt<br>aliquam quarat voluptatem.</P><br>
+           <button class="btn1">FLEET</button> <button class="reserve">RESERVATION</button></li></ul><br>
+         
+           <div class="cont">
+            <div class="left">
+              <span class="our">Our Clients</span><br><br>
+              <p class="accu"><span class="avero">Avero eoset</span> accusamus Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur<br>Atque corrupti quosdolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur doluram fuga. </p>
+            </div>&nbsp;
+ 
+            <div class="right">
+              <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                                          <h6 class="thomas">Mr Thomas Lloyd</h6>
+            </div>
+          </div>
+         </div>
+       </div><br><br>
+    
+       <footer>
+       <div id="containerf"> 
+         <div class="footer">
+          <div class="f-left">
+           <span class="copy">copyright©2010<a href="" class="do">Domain Name</a>-All Rights Reserved</span><br>
+          </div>   
+       <div class="f-right"> 
+           <a href="" class="free">Free CSS Templates <span class="bt">by</span>TemplateMonster</a>
+        </div>
+        </div>
+        </div>
+       </footer>
+
+      <script>
+
+        function one() {
+          document.getElementById("Simage").src="https://images-stag.jazelc.com/uploads/theautopian-m2en/airlinetop1.jpg";}
+
+        function two(){
+          document.getElementById("Simage").src="https://14weeksworthofsocks.files.wordpress.com/2015/01/img_0914.jpg";
+        }
+
+        function three(){
+                document.getElementById("Simage").src="https://img.huffingtonpost.com/asset/64625ad92100005b00086147.jpeg?cache=5uFJaly5RE&ops=scalefit_720_noupscale";
+        }
+
+  
+  </script>
+   
+</body>
+</html>
